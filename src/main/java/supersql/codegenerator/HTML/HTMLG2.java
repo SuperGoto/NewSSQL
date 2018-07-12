@@ -44,7 +44,7 @@ public class HTMLG2 extends Grouper implements Serializable {
 			String row = "";
 			String column = "";
 			String scroll = "";
-
+			
 			if(decos.containsKey("infinite-scroll")){
 				scroll = " scroll=\'id'";//TODO id->変数にして<div>タグのidを作成
 			}
@@ -170,15 +170,13 @@ public class HTMLG2 extends Grouper implements Serializable {
 					}
 				} else {
 					//taji comment out for []!3% //todo: G1と同じ処理にする？
-//					html_env.code
-//					.append("<TABLE cellSpacing=\"0\" cellPadding=\"0\" border=\"");
-//					html_env.code.append(html_env.tableBorder + "\" ");
-//					html_env.code.append("class=\"");
-//					html_env.code.append("nest\"");
-//					html_env.code.append(html_env.getOutlineMode());
-//					html_env.code.append(">");
-//					html_env.code.append("<TR><TD class=\""
-//							+ HTMLEnv.getClassID(tfe) + " nest\">\n");
+					html_env.code.append("<TABLE cellSpacing=\"0\" cellPadding=\"0\" border=\"");
+					html_env.code.append(html_env.tableBorder + "\" ");
+					html_env.code.append("class=\"");
+					html_env.code.append("nest\"");
+					html_env.code.append(html_env.getOutlineMode());
+					html_env.code.append(">");
+					html_env.code.append("<TR><TD class=\""+ HTMLEnv.getClassID(tfe) + " nest\">\n");
 				}
 			}
 
